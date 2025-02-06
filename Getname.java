@@ -1,11 +1,14 @@
 import java.util.*;
-public class Getname{
-public static void main(String []args){
-Scanner sc=new Scanner(System.in);
-System.out.println("Enter name");
-String name=sc.next();
-System.out.println("Enter age");
-String age=sc.next();
-System.out.println("name is"+name+" age "+age);
-}
+public class Getname {
+    public static void main(String []args) {
+        if (args.length < 2) {
+            System.out.println("Usage: java Getname <name> <age>");
+            return;
+        }
+        
+        String name = args[0];
+        String age = args[1];
+
+        System.out.println("Name is " + name + ", Age is " + age);
+    }
 }
